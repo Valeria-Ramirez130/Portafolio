@@ -12,6 +12,8 @@ import logogithub from './img/Github-logo.svg';
 import JavaScript_logo from './img/JavaScript_logo.svg';
 import iconoCopy from './img/iconocopy.svg';
 import iconoemail from './img/iconoemail.svg';
+import iconoLinkedln from './img/LinkedIn_icono.svg'
+import iconoEnviar from './img/iconoEnviar.svg'
 
 function App() {
   const handleCopyEmail = () => {
@@ -38,6 +40,7 @@ function App() {
               <h3 className='presentacion saludo'>¡Hola!</h3>
               <h1 className='presentacion nombre'>Soy Valeria Ramirez</h1>
               <h3 className='presentacion profesion'>Desarolladora Front-end</h3>
+              <button className="btn btn-primary">Ver CV</button>
             </div>
           </div>
         </section>
@@ -46,9 +49,9 @@ function App() {
           <div className='secciones seccion-acerca-de-mi'>
             <h2><strong>Acerca de mi</strong></h2>
             <h5>Soy Valeria Ramirez / Desarrolladora Frontend / Tecnologa en desarrollo de software</h5>
-            <p>Soy una Desarrolladora Front-End Junior con habilidades en HTML, CSS y JavaScript. Ademas
-               Diseñar y desarrollar interfaces atractivas y funcionales utilizando tecnologías como Bootstrap y React. 
-              Apasionada por aprender y contribuir en proyectos innovadores, 
+            <p>Soy una Desarrolladora Front-End Junior con habilidades en HTML, CSS y JavaScript.
+              Destaco en el diseño y desarrollo de interfaces atractivas y funcionales utilizando tecnologías como Bootstrap y React.
+              Apasionada por aprender y contribuir en proyectos innovadores,
               estoy comprometida con el crecimiento continuo y la excelencia en mi trabajo.</p>
           </div>
         </section>
@@ -101,13 +104,26 @@ function App() {
           <div className='secciones seccion-contacto'>
             <h2><strong>Contacto</strong></h2>
             <div className="input-container">
-              <img src={iconoemail} alt="Icono Email" className="icono-email" />
-              <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="valeriaramirezmarin52@gmail.com" readOnly />
-              <img src={iconoCopy} alt="Icono Copy" className="icono-copy" id="iconoCopy" onClick={handleCopyEmail} />
+              <div className="input-with-icon">
+                <img src={iconoLinkedln} alt="Icono linkedln" className="icono-linkedln" />
+                <input type="text" className="form-control input-text" value="Valeria Ramirez Marin" readOnly />
+                <img src={iconoEnviar} alt="Icono Enviar" className="icono-Enviar" id="iconoEnviar" onClick={() => window.open('https://www.linkedin.com/in/valeria-ramirez-marin-993171305', '_blank')} />
+              </div>
+              <div className="input-with-icon">
+                <img src={iconoemail} alt="Icono Email" className="icono-email" />
+                <input type="email" className="form-control input-email" id="exampleInputEmail1" aria-describedby="emailHelp" value="valeriaramirezmarin52@gmail.com" readOnly />
+                <img src={iconoCopy} alt="Icono Copy" className="icono-copy" id="iconoCopy" onClick={handleCopyEmail} />
+              </div>
             </div>
           </div>
         </section>
 
+
+        <section id="derechos" className="seccion-derechos">
+          <div className='secciones'>
+            <p>&copy; {new Date().getFullYear()} Valeria Ramirez. Todos los derechos reservados.</p>
+          </div>
+        </section>
       </div>
     </div>
   );
