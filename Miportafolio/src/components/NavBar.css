@@ -1,0 +1,41 @@
+/* Estilos generales para la barra de navegación */
+.custom-navbar {
+    background-color: rgb(0, 0, 0, 0.8); /* Color de fondo negro con 70% de opacidad */
+    backdrop-filter: blur(10px); /* Aplica un efecto de desenfoque */
+    position: absolute; /* Establece la posición absoluta para superponerla */
+    width: 100%; /* Ocupa el ancho completo del contenedor */
+    z-index: 1000; /* Asegura que esté en la parte superior */
+  }
+  
+  .custom-navbar .nav-link {
+    color: white !important; /* Cambia el color del texto a blanco */
+  }
+  .brand-text {
+    color: white;
+    margin-right: 10px; /* Espacio entre el texto y el icono de alternancia */
+  }
+  
+  
+  .custom-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+    border-color: white !important;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 4px;
+  }
+  .selected {
+    font-weight: bold !important; /* Establece el texto en negrita */
+  }
+  
+  
+/* Estilos específicos para dispositivos móviles */
+@media (max-width: 768px) {
+    .custom-navbar {
+      background-color: rgba(0, 0, 0, 0.92); /* Cambia el color de fondo a negro más opaco */
+    }
+    .selected {
+      font-weight: bold !important; /* Establece el texto en negrita */
+    }
+    
+  }
+  
