@@ -41,7 +41,9 @@ function App() {
               <h3 className="saludo">¡Hola!</h3>
               <h1 className="nombre">Soy Valeria Ramirez</h1>
               <h3 className="profesion">Desarrolladora Front-end</h3>
-              <button className="btn btn-primary">Ver CV</button>
+              <a href="/Cv.pdf" target="_blank" rel="noopener noreferrer">
+                <button className="btn btn-primary">Ver CV</button>
+              </a>
             </div>
           </div>
         </section>
@@ -52,7 +54,7 @@ function App() {
               <strong>Acerca de mi</strong>
             </h2>
             <h5>
-              Soy Valeria Ramirez / Desarrolladora Frontend / Tecnóloga en
+              Soy Valeria Ramirez / Desarrolladora Front-end / Tecnóloga en
               desarrollo de software
             </h5>
             <p>
