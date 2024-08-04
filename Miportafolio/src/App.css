@@ -1,0 +1,289 @@
+/* Estilos generales */
+
+.contenedor-principal {
+  padding-top: auto; /* Ajusta el valor según la altura del header */
+}
+
+.Header {
+  width: 100%;
+  padding: 0px 0; /* Ajusta el padding según sea necesario */
+  text-align: center; /* Centra el texto horizontalmente */
+  position: fixed; /* Fija el header en la parte superior */
+  top: 0; /* Ajusta la posición en la parte superior */
+  left: 0;
+  z-index: 1000;
+}
+
+
+/* Estilos para la sección de inicio */
+#inicio {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh; /* Reduce la altura para disminuir el espacio */
+  margin-bottom: 50px; /* Reduce el margen inferior para disminuir el espacio */
+}
+
+.secciones.seccion-inicio {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 50px; /* Ajusta el margen inferior para acercar las secciones */
+}
+
+.presentacion {
+  flex: 1;
+  text-align: center;
+}
+
+.circle {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 20px; /* Agrega margen entre la imagen y el texto */
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+}
+
+/* Estilos para la sección de "Acerca de mí" */
+.secciones.seccion-acerca-de-mi {
+  text-align: center; /* Centra el contenido horizontalmente */
+}
+
+.secciones.seccion-acerca-de-mi h2 {
+  margin-bottom: 20px; /* Espacio entre el título y el párrafo */
+}
+.secciones.seccion-acerca-de-mi h5 {
+  margin-bottom: 20px; /* Ajusta el margen inferior del h5 */
+}
+.secciones.seccion-acerca-de-mi p {
+  max-width: 600px; /* Establece un ancho máximo para el párrafo */
+  margin: 0 auto; /* Centra el párrafo horizontalmente */
+  text-align: justify; /* Justifica el texto */
+}
+
+/* Estilos para la sección de Mis Habilidades */
+.seccion-mis-habilidades {
+  margin-top: 100px; /* Ajusta el margen superior según sea necesario */
+  text-align: center; /* Centra el contenido horizontalmente */
+}
+
+.seccion-mis-habilidades h2 {
+  text-align: center;
+  margin-bottom: 40px; /* Agrega espacio entre el título y las imágenes */
+}
+
+
+/* Estilos para los logos en la sección de Mis Habilidades */
+.seccion-mis-habilidades {
+  margin-top: 100px; /* Ajusta el margen superior según sea necesario */
+  text-align: center; /* Centra el contenido horizontalmente */
+}
+
+.logo-container {
+  display: inline-block; /* Cambia la visualización a inline-block */
+  margin: 0 10px; /* Ajusta el margen entre los logos */
+  text-align: center; /* Centra el contenido horizontalmente */
+}
+
+.logo-container img {
+  max-width: 80px; /* Cambia el tamaño máximo de la imagen */
+  height: auto; /* Mantén la relación de aspecto */
+}
+
+
+
+.logo-container span {
+  display: block; 
+  margin-top: 5px; 
+}
+
+/* Estilos para la sección de Proyectos */
+.seccion-proyectos {
+  margin-top: 100px; /* Ajusta el margen superior según sea necesario */
+}
+
+.seccion-proyectos h2 {
+  text-align: center;
+}
+/* Estilos para la sección de contacto */
+.secciones.seccion-contacto {
+  text-align: center; /* Centra el contenido horizontalmente */
+  margin-bottom: 30px; /* Ajusta el margen inferior para separar de la siguiente sección */
+}
+
+/* Estilos para el título h2 de la sección de contacto */
+.secciones.seccion-contacto h2 {
+  margin-bottom: 10px; /* Ajusta el margen inferior del h2 */
+}
+
+/* Estilos para el contenedor de la entrada (input) y el icono en la sección de contacto */
+.secciones.seccion-contacto .input-container {
+  max-width: 400px; /* Establece el ancho máximo */
+  margin: 0 auto; /* Centra horizontalmente */
+  display: flex; /* Usa flexbox para alinear los elementos en una columna */
+  flex-direction: column; /* Coloca los elementos en una columna */
+}
+
+
+/* Estilos para los tipos de entrada */
+.input-text,
+.input-email {
+  flex: 1; /* Hace que el tipo de entrada ocupe el espacio disponible */
+  max-width: 100%; /* Establece el ancho máximo del tipo de entrada */
+  margin-bottom: 10px; /* Añade margen inferior */
+}
+
+/* Estilos para los iconos */
+.icono-linkedln,
+.icono-email {
+  margin-right: 10px; /* Ajusta el margen derecho entre el icono y la entrada */
+  width: 30px; /* Ajusta el ancho según sea necesario */
+  height: 30px; /* Ajusta la altura según sea necesario */
+}
+
+.input-with-icon {
+  display: flex; /* Usa flexbox para alinear los elementos */
+  align-items: center; /* Centra verticalmente los elementos */
+  justify-content: space-between; /* Alinea los elementos alrededor del espacio disponible */
+}
+
+.icono-Enviar,
+.icono-copy {
+  margin-left: 10px; /* Ajusta el margen izquierdo entre los tipos de entrada y los iconos */
+  width: 25px; /* Ajusta el ancho según sea necesario */
+  height: 25px; /* Ajusta la altura según sea necesario */
+}
+
+/* Estilos para el contenedor de iconos al final */
+.icon-container {
+  margin-top: 10px; /* Ajusta el margen superior entre los pares de entrada e icono */
+  display: flex; /* Usa flexbox para alinear los iconos */
+  justify-content: flex-end; /* Alinea los iconos a la derecha */
+}
+/* Estilos para los iconos */
+.icon-container img {
+  margin-left: 10px; /* Ajusta el margen izquierdo entre los iconos */
+}
+
+
+/* Estilos para la sección de derechos */
+.seccion-derechos {
+  text-align: center; /* Centra el contenido horizontalmente */
+  background-color: #F8F9F9; /* Añade el color de fondo deseado */
+  padding: 5px; /* Ajusta el relleno según sea necesario */
+  position: relative; /* Permite posicionar el elemento */
+  margin-top: 30px; /* Ajusta el margen superior para separar de la sección anterior */
+}
+
+
+
+/* Estilos para las demás secciones */
+/* Agrega estilos para las demás secciones si es necesario */
+.secciones section:not(:first-child) {
+  margin-top: auto; /* Ajusta el margen superior entre las secciones */
+}
+
+.secciones h2 {
+  text-align: center; /* Centra horizontalmente el texto */
+}
+
+/* Estilos para los títulos h2 en las secciones debajo de la sección de Inicio */
+.secciones section:not(#inicio) h2 {
+  margin-bottom: 40px; /* Ajusta el margen inferior */
+}
+
+
+
+
+/* Estilos para la sección de inicio en dispositivos móviles */
+@media (max-width: 768px) {
+  #inicio {
+    flex-direction: column;
+    align-items: center;
+    height: auto; /* Cambia la altura a 'auto' para permitir que la sección se ajuste dinámicamente */
+    padding: 20px; /* Ajusta el padding para dar más espacio */
+    margin-top: 50px; /* Ajusta el margen superior para bajar la sección */
+  }
+
+  .circle {
+    width: 250px; /* Mantén el mismo tamaño del círculo */
+    height: 250px; /* Mantén el mismo tamaño del círculo */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 50%; /* Asegura que el contenedor sea circular */
+    margin-top: 20px; /* Ajusta la posición de la foto para que no sea tapada por la barra de navegación */
+  }
+
+  .circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen para que se ajuste completamente dentro del contenedor circular */
+    border-radius: 50%; /* Asegura que la imagen sea circular */
+  }
+
+
+  .secciones.seccion-inicio {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 50px; /* Ajusta el margen inferior */
+    margin-top: 20px; /* Ajusta el margen superior */
+  }
+
+  .presentacion {
+    flex: 1;
+    text-align: center; /* Centra el texto horizontalmente */
+    margin: 10px 20px; /* Ajusta el margen para separar el texto del círculo */
+  }
+  .secciones.seccion-acerca-de-mi h5 {
+    margin-bottom: 20px; /* Ajusta el margen inferior del h5 */
+  }
+
+  .secciones.seccion-acerca-de-mi p {
+    max-width: 600px; /* Establece un ancho máximo para el párrafo */
+    margin: 0 auto 20px; /* Centra el párrafo horizontalmente y agrega margen inferior */
+    padding: 0 20px; /* Agrega margen lateral para evitar que toque el borde de la pantalla */
+    text-align: justify; /* Justifica el texto */
+  }
+  .seccion-mis-habilidades h2 {
+    margin-bottom: 20px; /* Ajusta el margen inferior del título en dispositivos móviles */
+  }
+
+  .seccion-mis-habilidades .logo-container {
+    display: inline-block; /* Cambia la visualización a inline-block */
+    margin: 0 10px; /* Ajusta el margen entre las imágenes */
+    text-align: center; /* Centra el contenido horizontalmente */
+  }
+
+  .logo-container img {
+    max-width: 50px; /* Cambia el tamaño máximo de la imagen en dispositivos móviles */
+    height: auto; /* Mantiene la relación de aspecto */
+  }
+  .secciones.seccion-contacto .input-container {
+    max-width: 90%; /* Establece el ancho máximo del contenedor */
+    margin: 0 auto 20px; /* Centra horizontalmente y agrega margen inferior */
+    padding: 0 10px; /* Agrega espacio lateral para evitar tocar los bordes de la pantalla */
+    display: flex; /* Usa flexbox para alinear los elementos */
+    align-items: center; /* Centra verticalmente los elementos */
+    justify-content: space-between; /* Alinea los elementos alrededor */
+  }
+
+  .secciones.seccion-contacto .input-container input {
+    flex: 1; /* Hace que el input ocupe el espacio disponible */
+  }
+
+  .secciones.seccion-contacto .input-container .icono-copy {
+    margin-left: 10px; /* Ajusta el margen izquierdo para separar el icono del input */
+  }
+}
