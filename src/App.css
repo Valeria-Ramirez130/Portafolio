@@ -1,0 +1,378 @@
+.contenedor-principal {
+  padding-top: auto; /* Ajusta el valor según la altura del header */
+}
+
+.Header {
+  width: 100%;
+  padding: 0px 0; /* Ajusta el padding según sea necesario */
+  text-align: center; /* Centra el texto horizontalmente */
+  position: fixed; /* Fija el header en la parte superior */
+  top: 0; /* Ajusta la posición en la parte superior */
+  left: 0;
+  z-index: 1000;
+}
+
+/* Estilos para la sección de inicio */
+#inicio {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh; /* Reduce la altura para disminuir el espacio */
+  margin-bottom: 50px; /* Reduce el margen inferior para disminuir el espacio */
+}
+
+.secciones.seccion-inicio {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 50px; /* Ajusta el margen inferior para acercar las secciones */
+}
+
+.presentacion {
+  flex: 1;
+  text-align: center;
+}
+
+.circle {
+  width: 280px; /* Tamaño aumentado del círculo */
+  height: 280px; /* Tamaño aumentado del círculo */
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 20px; /* Agrega margen entre la imagen y el texto */
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Asegura que la imagen llene el círculo */
+}
+
+/* Estilos para la sección de "Acerca de mí" */
+.secciones.seccion-acerca-de-mi {
+  text-align: center; /* Centra el contenido horizontalmente */
+  margin-bottom: 60px; /* Aumenta el margen inferior para separar de "Mis Habilidades" */
+}
+
+.secciones.seccion-acerca-de-mi h2 {
+  margin-bottom: 20px; /* Espacio entre el título y el párrafo */
+}
+
+.secciones.seccion-acerca-de-mi h5 {
+  margin-bottom: 20px; /* Ajusta el margen inferior del h5 */
+}
+
+.secciones.seccion-acerca-de-mi p {
+  max-width: 600px; /* Establece un ancho máximo para el párrafo */
+  margin: 0 auto; /* Centra el párrafo horizontalmente */
+  text-align: justify; /* Justifica el texto */
+}
+
+/* Estilos para la sección de Mis Habilidades */
+.seccion-mis-habilidades {
+  margin-top: 60px; /* Ajusta el margen superior para separar de "Acerca de mí" */
+  margin-bottom: 80px; /* Aumenta el margen inferior para separar de "Proyectos" */
+  text-align: center; /* Centra el contenido horizontalmente */
+}
+
+.seccion-mis-habilidades h2 {
+  margin-bottom: 40px; /* Agrega espacio entre el título y las imágenes */
+}
+
+/* Estilos para los logos en la sección de Mis Habilidades */
+.logo-container {
+  display: inline-block; /* Cambia la visualización a inline-block */
+  margin: 0 10px; /* Ajusta el margen entre los logos */
+  text-align: center; /* Centra el contenido horizontalmente */
+}
+
+.logo-container img {
+  max-width: 80px; /* Cambia el tamaño máximo de la imagen */
+  height: auto; /* Mantén la relación de aspecto */
+}
+
+.logo-container span {
+  display: block; 
+  margin-top: 5px; 
+}
+
+/* Estilos para la sección de Proyectos */
+.seccion-proyectos {
+  margin-top: 100px; /* Ajusta el margen superior para separar de la sección anterior */
+  text-align: center; /* Centra el contenido horizontalmente */
+}
+
+.seccion-proyectos h2 {
+  margin: 40px 0; /* Espacio superior e inferior del título */
+}
+
+.proyectos-row {
+  display: flex;
+  flex-wrap: wrap; /* Permite que las tarjetas se ajusten si el ancho es insuficiente */
+  justify-content: center; /* Centra las tarjetas horizontalmente */
+  gap: 50px; /* Espacio mínimo entre las tarjetas */
+  margin: 0; /* Elimina cualquier margen externo */
+}
+
+/* Estilos para las tarjetas de proyectos */
+.card-proyecto {
+  border: 1px solid #ddd; /* Borde ligero para la tarjeta */
+  border-radius: 10px; /* Bordes redondeados */
+  overflow: hidden; /* Asegura que el contenido no sobresalga */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Sombra para la tarjeta */
+  margin: 20px; /* Espacio alrededor de cada tarjeta */
+  max-width: 350px; /* Ancho máximo de la tarjeta */
+  height: auto; /* Ajusta la altura para adaptarse al contenido */
+  display: flex; /* Usa flexbox para alinear el contenido internamente */
+  flex-direction: column; /* Hace que el contenido interno se alinee en columna */
+  text-align: center; /* Centra el texto dentro de la tarjeta */
+  box-sizing: border-box; /* Incluye el padding y el border en el width y height */
+  position: relative; /* Necesario para el posicionamiento absoluto de la superposición */
+}
+
+/* Estilos para la imagen dentro de la tarjeta */
+.card-proyecto img {
+  width: 100%; /* Imagen ocupa todo el ancho de la tarjeta */
+  height: auto; /* Ajusta la altura de la imagen para mantener la proporción deseada */
+  object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionar */
+  transition: opacity 0.3s ease; /* Suaviza el efecto de la superposición */
+}
+
+/* Estilos para la superposición que aparece al pasar el ratón */
+.card-proyecto .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 41%; /* Ajusta la altura del overlay según sea necesario */
+  max-height: 100%; /* No exceder la altura de la imagen */
+  background: rgba(0, 0, 0, 0.7); /* Fondo oscuro y transparente */
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease; /* Suaviza la aparición de la superposición */
+  text-align: center; /* Centra el texto dentro de la superposición */
+  font-size: 18px; /* Tamaño del texto */
+  padding: 20px; /* Espacio alrededor del texto */
+  box-sizing: border-box; /* Incluye el padding en el tamaño del overlay */
+  border-radius: 10px; /* Bordes redondeados */
+  font-weight: bold; /* Hace que el texto esté en negrilla */
+}
+
+/* Muestra la superposición cuando el ratón está sobre la tarjeta */
+.card-proyecto:hover .overlay {
+  opacity: 1;
+}
+
+/* Estilos para el texto dentro de la superposición */
+.overlay p {
+  margin: 0; /* Elimina el margen del texto */
+  display: flex; /* Usa flexbox para alinear íconos y texto */
+  align-items: center; /* Centra verticalmente los íconos y el texto */
+}
+
+/* Estilos para los íconos en la superposición de las tarjetas de proyectos */
+.overlay p .icono {
+  width: 16px; /* Tamaño reducido del ícono */
+  height: 16px; /* Tamaño reducido del ícono */
+  margin-right: 5px; /* Espacio entre el ícono y el texto */
+}
+
+/* Ajusta la superposición para que ocupe solo el tamaño de la imagen */
+.card-proyecto .overlay {
+  top: 0;
+  left: 0;
+  width: 100%; /* Ancho igual al de la imagen */
+  height: 35.7%; /* Altura ajustada al contenido de la imagen */
+  max-height: 100%; /* No exceder la altura de la imagen */
+}
+
+/* Estilos para el título dentro de la tarjeta */
+.card-proyecto h3 {
+  font-size: 18px; /* Ajusta el tamaño del título */
+  margin: 15px; /* Espacio alrededor del título */
+  font-weight: bold; /* Hace que el título esté en negrilla */
+}
+.card-title{
+  font-weight: bold;
+}
+
+/* Estilos para el párrafo dentro de la tarjeta */
+.card-proyecto p {
+  font-size: 14px; /* Ajusta el tamaño del texto del párrafo */
+  margin: 0 15px 15px; /* Espacio alrededor del párrafo */
+}
+.card-text {
+  text-align: justify;
+}
+
+/* Estilos para la sección de logos tecnológicos */
+.tech-logos {
+  display: flex;
+  flex-direction: row; /* Alinea las imágenes en una sola línea horizontal */
+  justify-content: center; /* Centra las imágenes horizontalmente */
+  align-items: center; /* Centra las imágenes verticalmente */
+  overflow-x: hidden; /* Evita que las imágenes se envuelvan */
+  white-space: nowrap; /* Evita que las imágenes se envuelvan en líneas múltiples */
+  margin-bottom: 20px; /* Ajusta el margen inferior según sea necesario */
+  padding: 0 10px; /* Ajusta el padding si es necesario */
+}
+
+.tech-logos img {
+  max-width: 30px; /* Cambia el tamaño de las imágenes según sea necesario */
+  height: auto; /* Mantén la proporción de las imágenes */
+  margin-right: 10px; /* Espacio entre las imágenes */
+  display: inline-block; /* Asegura que las imágenes se alineen en línea */
+}
+.custom-link {
+  color: inherit; /* Hereda el color del elemento padre */
+  text-decoration: none; /* Elimina el subrayado */
+}
+
+.custom-link:hover {
+  text-decoration: underline; /* Opcional: subrayado al pasar el cursor */
+}
+
+/* Estilos para la sección de contacto */
+.secciones.seccion-contacto {
+  text-align: center; /* Centra el contenido horizontalmente */
+  margin-top: 100px; /* Añade espacio superior para separar de la sección de proyectos */
+  margin-bottom: 30px; /* Ajusta el margen inferior para separar de la siguiente sección */
+}
+
+/* Estilos para el título h2 de la sección de contacto */
+.secciones.seccion-contacto h2 {
+  margin-bottom: 10px; /* Ajusta el margen inferior del h2 */
+}
+
+/* Estilos para el contenedor de la entrada (input) y el icono en la sección de contacto */
+.secciones.seccion-contacto .input-container {
+  max-width: 400px; /* Establece el ancho máximo del contenedor */
+  margin: 0 auto; /* Centra horizontalmente el contenedor */
+}
+
+/* Estilos para los íconos en la sección de contacto */
+.input-with-icon {
+  display: flex; /* Usa flexbox para alinear los elementos */
+  align-items: center; /* Alinea los elementos verticalmente al centro */
+  margin-bottom: 15px; /* Espacio entre el ícono y el input */
+}
+
+.icono-linkedln, .icono-email {
+  width: 25px; /* Tamaño del ícono */
+  height: 25px; /* Tamaño del ícono */
+  margin-right: 10px; /* Espacio entre el ícono y el input */
+}
+
+.input-with-icon input {
+  width: calc(100% - 30px); /* Ajusta el ancho del input considerando el tamaño del ícono */
+  padding: 10px; /* Espacio interno */
+  border: 1px solid #ddd; /* Borde ligero */
+  border-radius: 5px; /* Bordes redondeados */
+  box-sizing: border-box; /* Incluye el padding en el tamaño total */
+}
+
+/* Estilos para el área de entrada (input) en la sección de contacto */
+.secciones.seccion-contacto input[type="text"], 
+.secciones.seccion-contacto input[type="email"] {
+  width: 100%; /* Ancho completo */
+  padding: 10px; /* Espacio interno */
+  margin-bottom: 10px; /* Espacio entre los campos de entrada */
+  border: 1px solid #ddd; /* Borde ligero */
+  border-radius: 5px; /* Bordes redondeados */
+  box-sizing: border-box; /* Incluye el padding en el tamaño total */
+}
+
+/* Estilos para el botón de enviar en la sección de contacto */
+.secciones.seccion-contacto .btn-enviar {
+  background-color: #4CAF50; /* Color de fondo */
+  color: white; /* Color del texto */
+  padding: 10px 20px; /* Espacio interno */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer; /* Cambia el cursor al pasar el ratón */
+  font-size: 16px; /* Tamaño del texto */
+}
+
+.secciones.seccion-contacto .btn-enviar:hover {
+  background-color: #45a049; /* Color de fondo al pasar el ratón */
+}
+
+/* Estilos para la sección de derechos reservados */
+.seccion-derechos {
+  text-align: center; /* Centra el texto horizontalmente */
+  padding: 20px 0; /* Espacio superior e inferior para la sección */
+  background-color: #f1f1f1; /* Color de fondo (opcional) */
+}
+
+.secciones {
+  max-width: 1200px; /* Establece un ancho máximo para el contenido */
+  margin: 0 auto; /* Centra horizontalmente el contenido */
+  padding: 0 20px; /* Espacio interno para ajustar el contenido */
+}
+
+.seccion-derechos p {
+  margin: 0; /* Elimina márgenes para centrar el texto correctamente */
+}
+
+/* Estilos para la sección de inicio en dispositivos móviles */
+@media (max-width: 768px) {
+  #inicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto; /* Cambia la altura a 'auto' para permitir que la sección se ajuste dinámicamente */
+    padding: 20px; /* Ajusta el padding para dar más espacio */
+    margin-top: 50px; /* Ajusta el margen superior para bajar la sección */
+  }
+
+  .circle {
+    width: 250px; /* Mantén el mismo tamaño del círculo */
+    height: 250px; /* Mantén el mismo tamaño del círculo */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 50%; /* Asegura que el contenedor sea circular */
+    margin-top: 20px; /* Ajusta la posición de la foto para que no sea tapada por la barra de navegación */
+  }
+
+  .circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen para que se ajuste completamente dentro del contenedor circular */
+    border-radius: 50%; /* Asegura que la imagen sea circular */
+  }
+
+  .secciones.seccion-inicio {
+    display: flex;
+    flex-direction: column; /* Cambia la dirección a columna */
+    align-items: center;
+    justify-content: center; /* Centra el contenido verticalmente */
+    margin-bottom: 50px; /* Ajusta el margen inferior */
+    margin-top: 20px; /* Ajusta el margen superior */
+  }
+
+  .presentacion {
+    flex: 1;
+    text-align: center; /* Centra el texto horizontalmente */
+    margin: 10px 20px; /* Ajusta el margen para separar el texto del círculo */
+  }
+
+  .presentacion h3, .presentacion h1, .presentacion button {
+    margin: 10px 0; /* Ajusta el margen para separar los elementos */
+  }
+
+  .seccion-mis-habilidades .logo-container img {
+    max-width: 60px; /* Reduce el tamaño máximo de las imágenes */
+  }
+
+  .card-proyecto {
+    max-width: 100%; /* Ocupa todo el ancho en pantallas pequeñas */
+    margin: 10px; /* Espacio reducido alrededor de la tarjeta */
+  }
+}
